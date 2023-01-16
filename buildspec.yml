@@ -1,4 +1,6 @@
-version: 0.1
+# This file controls the AWS CodeBuild
+
+version: 0.2
 phases:
   pre_build:
     commands:
@@ -10,7 +12,7 @@ phases:
   post_build:
     commands:
       - echo "Entered the post-build phase"
-      - mv target/deploy ./.
+      - mv target/deploy ./
 artifacts:
   files:
     - deploy/**/*
